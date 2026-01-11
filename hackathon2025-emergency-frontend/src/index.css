@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-base: 248 250 252;
+  --color-surface: 255 255 255;
+  --color-ink: 15 23 42;
+  --color-muted: 71 85 105;
+  --color-border: 226 232 240;
+  --color-primary: 59 130 246;
+  --color-secondary: 96 165 250;
+  --color-cta: 249 115 22;
+  --color-success: 22 163 74;
+  --color-warning: 245 158 11;
+  --color-danger: 239 68 68;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: rgb(var(--color-base));
+  color: rgb(var(--color-ink));
+  min-height: 100vh;
+}
+
+.bg-aurora {
+  background-image: radial-gradient(
+      1200px circle at 10% 10%,
+      rgba(59, 130, 246, 0.18),
+      transparent 55%
+    ),
+    radial-gradient(
+      900px circle at 90% 20%,
+      rgba(249, 115, 22, 0.16),
+      transparent 50%
+    ),
+    radial-gradient(
+      900px circle at 30% 90%,
+      rgba(94, 234, 212, 0.18),
+      transparent 55%
+    );
+}
+
+.bg-grid {
+  background-image: linear-gradient(
+      rgba(148, 163, 184, 0.2) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.2) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 18px 45px -30px rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(14px);
+}
