@@ -15,7 +15,7 @@ import {
 } from "../utils/format";
 
 const Home = () => {
-  const { t, lang } = useI18n();
+  const { t, lang, setLang } = useI18n();
   const [stats, setStats] = useState([]);
   const [pipelineDeals, setPipelineDeals] = useState([]);
   const [marketSnapshot, setMarketSnapshot] = useState([]);
@@ -455,6 +455,15 @@ const Home = () => {
               </button>
             </div>
             <div className="flex items-center gap-3">
+              <Button
+                variant="outline"
+                size="sm"
+                aria-pressed={lang === "vi"}
+                onClick={() => setLang("vi")}
+                className={lang === "vi" ? "border-primary text-primary" : ""}
+              >
+                {t("common.vietnamese", "Vietnamese")}
+              </Button>
               <Button variant="ghost" size="sm" onClick={openLogin}>
                 {t("common.login", "Login")}
               </Button>
