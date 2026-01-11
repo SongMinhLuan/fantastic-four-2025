@@ -454,7 +454,16 @@ const Home = () => {
                 {t("home.nav.impact", "Impact")}
               </button>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
+              <Button
+                variant="outline"
+                size="sm"
+                aria-pressed={lang === "en"}
+                onClick={() => setLang("en")}
+                className={lang === "en" ? "border-primary text-primary" : ""}
+              >
+                {t("common.english", "English")}
+              </Button>
               <Button
                 variant="outline"
                 size="sm"
